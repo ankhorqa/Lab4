@@ -16,14 +16,14 @@ public:
         if (size < capacity) {
             items[size++] = item;
         } else {
-            std::cout << "Inventory is full!" << std::endl;
+            std::cout << "Инвентарь заполнен!" << std::endl;
         }
     }
 
     void displayInventory() const {
-        std::cout << "Inventory:\n";
+        std::cout << "Инвентарь:\n";
         if (size == 0) {
-            std::cout << "(empty)\n";
+            std::cout << "(пусто)\n";
             return;
         }
         for (int i = 0; i < size; ++i) {
@@ -35,10 +35,9 @@ public:
 int main() {
     Inventory playerInventory;
 
-    playerInventory.addItem("Sword");
-    playerInventory.addItem("Shield");
-    playerInventory.addItem("Health Potion");
-    playerInventory.addItem("Bow");
+    playerInventory.addItem("Меч");
+    playerInventory.addItem("Щит");
+    playerInventory.addItem("Зелье восстановления ХП");
 
     playerInventory.displayInventory();
 
